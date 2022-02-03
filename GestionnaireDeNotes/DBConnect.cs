@@ -92,7 +92,34 @@ namespace GestionnaireDeNotes
             return true;
 
         }
-        
+
+        public bool LoginEtudiant(string Username, string PassWord)
+        {
+            // définir la requête 
+            string request = "SELECT * FROM etudiant WHERE matricule='" + Username + "' and matricule='" + PassWord + "'";
+
+            if (this.OpenConnexion() == true) // vérifier si la connexion à été ouvert
+            {
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+                adptLogin = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adptLogin.Fill(ds);
+                int count = ds.Tables[0].Rows.Count;
+                if (count == 0)
+                {
+                    return false;
+                }
+
+
+                this.conn.Close(); // fermer la session de connexion
+            }
+
+            return true;
+
+        }
+
+
+
         public void Insert(Etudiant e)
         {
             // définir la requête 
@@ -123,7 +150,7 @@ namespace GestionnaireDeNotes
         public void Update(Etudiant e, int ID)
         {
             // définir la requête 
-            string request = "UPDATE  produit SET matricule= '" + e.Matricule + "',nom= '" + e.Nom + "', prenom= '" + e.Prenom + "', developpement= '" + e.Developpement + "', mathematiques= '" + e.Mathematiques + "', donnees = '" + e.Donnees + "', reseaux = '" + e.Reseaux + "', management = '" + e.Management + "', langue = '" + e.Langue + "' WHERE id = " + ID + " ";
+            string request = "UPDATE  etudiant SET matricule= '" + e.Matricule + "',nom= '" + e.Nom + "', prenom= '" + e.Prenom + "', developpement= '" + e.Developpement + "', mathematiques= '" + e.Mathematiques + "', donnees = '" + e.Donnees + "', reseaux = '" + e.Reseaux + "', management = '" + e.Management + "', langue = '" + e.Langue + "' WHERE id = " + ID + " ";
 
 
             if (this.OpenConnexion() == true) // vérifier si la connexion à été ouvert

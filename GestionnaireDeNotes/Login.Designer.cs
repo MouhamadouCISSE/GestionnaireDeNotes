@@ -34,6 +34,7 @@
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEtudiant = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +63,11 @@
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(223, 374);
+            this.btnLogin.Location = new System.Drawing.Point(135, 362);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(110, 39);
             this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Admin";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -100,12 +101,25 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // btnEtudiant
+            // 
+            this.btnEtudiant.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEtudiant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEtudiant.Location = new System.Drawing.Point(327, 362);
+            this.btnEtudiant.Name = "btnEtudiant";
+            this.btnEtudiant.Size = new System.Drawing.Size(110, 39);
+            this.btnEtudiant.TabIndex = 11;
+            this.btnEtudiant.Text = "Etudiant";
+            this.btnEtudiant.UseVisualStyleBackColor = false;
+            this.btnEtudiant.Click += new System.EventHandler(this.btnEtudiant_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(582, 435);
+            this.Controls.Add(this.btnEtudiant);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPassword);
@@ -129,6 +143,7 @@
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnEtudiant;
     }
 }
 

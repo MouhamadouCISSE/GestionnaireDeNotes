@@ -67,6 +67,10 @@ namespace GestionnaireDeNotes
                 MessageBox.Show(" Veuillez remplir tous les champs");
 
             }
+            if (int.Parse(developpement.Text) > 20  || int.Parse(mathematiques.Text) > 20 || int.Parse(donnees.Text) > 20 || int.Parse(reseaux.Text) > 20 || int.Parse(management.Text) > 20 || int.Parse(langue.Text) > 20)
+            {
+                MessageBox.Show(" Veuillez saisir une note comprise entre 0 et 20");
+            }
             else
             {
                 Etudiant etudiant = new Etudiant();
@@ -129,7 +133,10 @@ namespace GestionnaireDeNotes
             if (matricule.Text == "" || nom.Text == "" || prenom.Text == "" || developpement.Text == "" || mathematiques.Text == "" || donnees.Text == "" || reseaux.Text == "" || management.Text == "" || langue.Text == "")
             {
                 MessageBox.Show(" Veuillez remplir tous les champs");
-
+            }
+            if (int.Parse(developpement.Text) > 20 || int.Parse(mathematiques.Text) > 20 || int.Parse(donnees.Text) > 20 || int.Parse(reseaux.Text) > 20 || int.Parse(management.Text) > 20 || int.Parse(langue.Text) > 20)
+            {
+                MessageBox.Show(" Veuillez saisir une note comprise entre 0 et 20");
             }
             else
             {
@@ -185,7 +192,7 @@ namespace GestionnaireDeNotes
                 {
                     rech = dataGridView1.Rows[i].Cells[0].Value.ToString();
 
-                    MessageBox.Show("il existe!!");
+                    MessageBox.Show("l'etudiant existe!!");
                     dispay(rech);
 
                     cmp = 1;
@@ -194,7 +201,7 @@ namespace GestionnaireDeNotes
             }
             if (cmp == 0)
             {
-                MessageBox.Show("n'existe Pas");
+                MessageBox.Show("l'etudiant n'existe pas");
             }
         }
     }

@@ -59,6 +59,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +112,7 @@
             this.textBoxRechercher.Name = "textBoxRechercher";
             this.textBoxRechercher.Size = new System.Drawing.Size(195, 25);
             this.textBoxRechercher.TabIndex = 50;
+            this.textBoxRechercher.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnSupprimer
             // 
@@ -198,6 +205,7 @@
             this.reseaux.Name = "reseaux";
             this.reseaux.Size = new System.Drawing.Size(116, 22);
             this.reseaux.TabIndex = 41;
+            this.reseaux.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // donnees
             // 
@@ -206,6 +214,7 @@
             this.donnees.Name = "donnees";
             this.donnees.Size = new System.Drawing.Size(116, 22);
             this.donnees.TabIndex = 40;
+            this.donnees.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // mathematiques
             // 
@@ -214,6 +223,7 @@
             this.mathematiques.Name = "mathematiques";
             this.mathematiques.Size = new System.Drawing.Size(116, 22);
             this.mathematiques.TabIndex = 39;
+            this.mathematiques.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // developpement
             // 
@@ -222,6 +232,7 @@
             this.developpement.Name = "developpement";
             this.developpement.Size = new System.Drawing.Size(116, 22);
             this.developpement.TabIndex = 38;
+            this.developpement.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // prenom
             // 
@@ -322,24 +333,26 @@
             // 
             // langue
             // 
-            this.langue.Location = new System.Drawing.Point(177, 419);
+            this.langue.Location = new System.Drawing.Point(177, 411);
             this.langue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.langue.Name = "langue";
             this.langue.Size = new System.Drawing.Size(116, 22);
             this.langue.TabIndex = 58;
+            this.langue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // management
             // 
-            this.management.Location = new System.Drawing.Point(177, 381);
+            this.management.Location = new System.Drawing.Point(177, 379);
             this.management.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.management.Name = "management";
             this.management.Size = new System.Drawing.Size(116, 22);
             this.management.TabIndex = 57;
+            this.management.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 422);
+            this.label1.Location = new System.Drawing.Point(39, 414);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 56;
@@ -348,7 +361,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(39, 384);
+            this.label12.Location = new System.Drawing.Point(39, 382);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 16);
             this.label12.TabIndex = 55;
@@ -364,12 +377,72 @@
             this.label13.TabIndex = 59;
             this.label13.Text = "Notes de l\'etudiant";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(299, 245);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 16);
+            this.label10.TabIndex = 60;
+            this.label10.Text = " / 20";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(299, 277);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 16);
+            this.label14.TabIndex = 61;
+            this.label14.Text = " / 20";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(299, 311);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(31, 16);
+            this.label15.TabIndex = 62;
+            this.label15.Text = " / 20";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(299, 417);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 16);
+            this.label16.TabIndex = 65;
+            this.label16.Text = " / 20";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(299, 382);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(31, 16);
+            this.label17.TabIndex = 64;
+            this.label17.Text = " / 20";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(299, 347);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(31, 16);
+            this.label18.TabIndex = 63;
+            this.label18.Text = " / 20";
+            // 
             // Notes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1169, 592);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.langue);
             this.Controls.Add(this.management);
@@ -443,5 +516,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

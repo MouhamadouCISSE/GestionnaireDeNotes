@@ -32,39 +32,60 @@ namespace GestionnaireDeNotes
             if (textBoxUserName.Text == "" || textBoxPassword.Text == "")
             {
                 MessageBox.Show(" Veuillez remplir tous les champs");
-
             }
             else
             {
-
-
                 // Inserer à la base
                 DBConnect dbconnect = new DBConnect();
                 bool v;
                 v = dbconnect.Login(textBoxUserName.Text, textBoxPassword.Text);
-
                 if (v)
                 {
-                    MessageBox.Show(" Vous etes connecté ! ");
-
+                    MessageBox.Show(" Vous etes connecté en tant admin! ");
                     Notes notes = new Notes();
                     this.Hide();
                     notes.Show();
-
                 }
                 else
                 {
                     MessageBox.Show(" Erreur ! identifiant ou mot de passe incorrect ");
                 }
-
-
-
             }
         }
+        private void btnEtudiant_Click(object sender, EventArgs e)
+        {
+            if (textBoxUserName.Text == "" || textBoxPassword.Text == "")
+            {
+                MessageBox.Show(" Veuillez remplir tous les champs");
+            }
+            else
+            {
+                // Inserer à la base
+                DBConnect dbconnect = new DBConnect();
+                bool s;
+                s = dbconnect.LoginEtudiant(textBoxUserName.Text, textBoxPassword.Text);
+                if (s)
+                {
+                    MessageBox.Show(" Vous etes connecté en tant qu'etudiant! ");
+                    Bulletin bulletin = new Bulletin();
+                    this.Hide();
+                    bulletin.Show();
+                    bulletin.dispay(textBoxUserName.Text);
+                }
+                else
+                {
+                    MessageBox.Show(" Erreur ! identifiant ou mot de passe incorrect ");
+                }
+            }
+
+        }
+
 
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }
